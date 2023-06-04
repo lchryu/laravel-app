@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <p>This is Footer</p>
-    {{ print_r(URL('images/zenitsu.jpg'))}}
+    <h1>PageController.index, with shared Header, Footer</h1>
+    {{-- The storage is more secure    --}}
     <img
-        src="{{ URL('images/zenitsu.jpg') }}"
+        src="{{ asset('storage/zenitsu.jpg') }}"
         width="400px"
         height="250px"
         alt="">
