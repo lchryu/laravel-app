@@ -1,5 +1,5 @@
 # PHP Laravel cơ bản trong 3 giờ | PHP Laravel for beginners
-<a href="https://www.youtube.com/watch?v=iSsFV9hmxDk&t=1918s">Link tham khảo</a>
+# <a href="https://www.youtube.com/watch?v=iSsFV9hmxDk&t=1918s">Link tham khảo (Ấn vào đây)</a>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
