@@ -51,4 +51,12 @@
     @foreach($names as $eachName)
         <h3>{{ $eachName }}</h3>
     @endforeach
+    <h3>---------------------------</h3>
+    {{ $i = 0 }}
+    @while($i++ < 5)
+        <h1>
+            {{ $i }}
+        </h1>
+    @endwhile
+
 @endsection
