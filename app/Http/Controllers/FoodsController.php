@@ -8,10 +8,16 @@ use App\Models\Food;
 class FoodsController extends Controller
 {
     public function index() {
-        $foods = Food::all(); // select * from foods;
+        //$foods = Food::all(); // select * from foods;
+        $food = Food::where('name','=','sushi')
+            ->firstOrFail();
 //        dd($foods);
         return view('foods.index', [
-            'foods' => $foods
+            'food' => $food
         ]);
+    }
+    public function create() {
+        // insert new food
+        return view('foods.create');
     }
 }
