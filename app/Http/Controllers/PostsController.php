@@ -7,8 +7,21 @@ use Illuminate\Support\Facades\DB;
 class PostsController extends Controller
 {
     public function index() {
-        $posts = DB::select("SELECT * FROM posts");
-//        return view('posts.index', compact('posts'));
+        // Query builders
+//        $posts = DB::select("SELECT * FROM posts WHERE id = :id;",
+//        [
+//            'id' => 1
+//        ]);
+
+        // 2. eloquante ORM
+        $posts = DB::table('posts')
+            ->where('id', 5)
+            ->delete();
+//            ->update([
+//                'title' => 'Updated title',
+//                'body' => 'Updated body'
+//        ]);
         dd($posts);
+
     }
 }
