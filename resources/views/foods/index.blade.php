@@ -7,16 +7,28 @@
        role="button"
        aria-pressed="true"
     >Add a new Food</a>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-        <div class="ms-2 me-auto">
-            <div class="fw-bold">{{ $food->name }}</div>
-            {{ $food->description }}
-        </div>
-        <span class="badge bg-primary rounded-pill">
+
+    @foreach($foods as $food)
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">{{ $food->name }}</div>
+                {{ $food->description }}
+            </div>
+            <span class="badge bg-primary rounded-pill">
                 {{ $food->count }}
             </span>
-    </li>
-    {{--    @foreach($foods as $food)--}}
-
-{{--    @endforeach--}}
+            <a class="btn btn-primary" href="foods/{{ $food->id }}/edit">
+                Edit
+            </a>
+             {{-- Delete a food --}}
+            <form action="/foods/{{ $food->id }}" method="post">
+                @csrf
+                @method('delete')
+                <button type="submit"
+                        class="btn btn-danger">
+                    Delete
+                </button>
+            </form>
+        </li>
+    @endforeach
 @endsection
